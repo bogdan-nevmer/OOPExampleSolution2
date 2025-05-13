@@ -1,29 +1,28 @@
-#include<iostream>
-
-
-class integer {
+#pragma once
+class Integer
+{
 private:
-	int value;
+	int number;
+
+
 
 public:
-	integer();
-	integer(int val);
-	integer(const integer & obj);
 
-	int getValue()const;
-	void setValue(int val);
+	Integer add(Integer interer);
+	Integer sub(Integer interer);
+	Integer mul(Integer interer);
+	Integer div(Integer interer);
 
-	integer add(const integer& other)const;
-	integer substract(const integer& other)const;
-	integer multiply(const integer& other)const;
-	integer divide(const integer& other)const;
+	Integer() : Integer(0) {}
+	Integer(int number);
+
+	int getNumber();
+	void setNumber(int number);
 
 
-	integer operator+(const integer& other)const;
-	integer operator-(const integer& other)const;
-	integer operator*(const integer& other)const;
-	integer operator/(const integer& other)const;
 
-	void print() const;
+
+
+
 
 };
